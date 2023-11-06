@@ -8432,3 +8432,18 @@ INSERT INTO templates (template_id, project_id, recording_id, species_id, songty
 INSERT INTO templates (template_id, project_id, recording_id, species_id, songtype_id, name, uri, x1, y1, x2, y2, date_created, deleted, source_project_id, user_id, disabled) VALUES (862, 1060, 1285335, 18, 1, 'Coereba flaveola Common Song', 'project_1060/templates/862.png', 34.9473814229249, 2172.520457834932, 37.80508893280632, 3146.9067098807586, '2020-11-26 07:25:19.0', 0, null, null, 0);
 INSERT INTO templates (template_id, project_id, recording_id, species_id, songtype_id, name, uri, x1, y1, x2, y2, date_created, deleted, source_project_id, user_id, disabled) VALUES (863, 1060, 1285335, 12297, 1, 'Eleutherodactylus hedricki Common Song', 'project_1060/templates/863.png', 0.4762845849802371, 3796.4975445779764, 1.9051383399209485, 4843.060556034605, '2020-11-26 07:42:40.0', 0, null, null, 0);
 INSERT INTO templates (template_id, project_id, recording_id, species_id, songtype_id, name, uri, x1, y1, x2, y2, date_created, deleted, source_project_id, user_id, disabled) VALUES (864, 1060, 1285335, 1999, 1, 'Patagioenas squamosa Common Song', 'project_1060/templates/864.png', 40.00790513833992, 3363.4369881131647, 42.210721343873516, 4626.530277802199, '2020-11-26 07:45:50.0', 0, null, null, 0);
+INSERT INTO templates (template_id, project_id, recording_id, species_id, songtype_id, name, uri, x1, y1, x2, y2, date_created, deleted, source_project_id, user_id, disabled) VALUES (3758, 1055, 3443819, 4908, 1, 'Legatus_leucophaius2', null, 15.268461422770342, 2873.713751169317, 16.035494059257033, 4400.374181478017, '2023-11-06 22:15:54', 0, 1209, 1322, 0);
+
+INSERT INTO playlists (playlist_id, project_id, name, playlist_type_id, uri, metadata, total_recordings, status) VALUES (10714, 1055, 'Cafundo 12 Recordings', 1, null, null, 12, 20);
+INSERT INTO playlist_recordings (playlist_id, recording_id) VALUES (10714, 1363646);
+INSERT INTO playlist_recordings (playlist_id, recording_id) VALUES (10714, 1363838);
+INSERT INTO playlist_recordings (playlist_id, recording_id) VALUES (10714, 1363894);
+INSERT INTO playlist_recordings (playlist_id, recording_id) VALUES (10714, 1363897);
+INSERT INTO playlist_recordings (playlist_id, recording_id) VALUES (10714, 1363903);
+INSERT INTO playlist_recordings (playlist_id, recording_id) VALUES (10714, 1363978);
+INSERT INTO playlist_recordings (playlist_id, recording_id) VALUES (10714, 1363982);
+INSERT INTO playlist_recordings (playlist_id, recording_id) VALUES (10714, 1363987);
+INSERT INTO playlist_recordings (playlist_id, recording_id) VALUES (10714, 1364482);
+INSERT INTO playlist_recordings (playlist_id, recording_id) VALUES (10714, 1364545);
+INSERT INTO playlist_recordings (playlist_id, recording_id) VALUES (10714, 1364678);
+INSERT INTO playlist_recordings (playlist_id, recording_id) VALUES (10714, 1364721);
