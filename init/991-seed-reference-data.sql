@@ -104,14 +104,6 @@ INSERT INTO `project_news_types` VALUES (13,'training set removed','Training set
 /*!40000 ALTER TABLE `project_news_types` ENABLE KEYS */;
 
 --
--- Dumping data for table `project_types`
---
-
-/*!40000 ALTER TABLE `project_types` DISABLE KEYS */;
-INSERT INTO `project_types` VALUES (1,'testType','testing type');
-/*!40000 ALTER TABLE `project_types` ENABLE KEYS */;
-
---
 -- Dumping data for table `roles`
 --
 
