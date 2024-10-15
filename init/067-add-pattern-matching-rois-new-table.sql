@@ -5,11 +5,11 @@ create table arbimon2.pattern_matching_rois_new (
     species_id                int not null,
     songtype_id               int not null,
     x1                        float not null,
-    y1                        smallint unsigned not null,
+    y1                        mediumint unsigned not null,
     x2                        float not null,
-    y2                        smallint unsigned not null,
-    uri_param1                mediumint unsigned not null,
-    uri_param2                tinyint unsigned null,
+    y2                        mediumint unsigned not null,
+    uri_param1                int unsigned not null,
+    uri_param2                smallint unsigned null,
     score                     float null,
     validated                 tinyint(1) null,
     cs_val_present            tinyint default 0 not null,
@@ -20,6 +20,15 @@ create table arbimon2.pattern_matching_rois_new (
     denorm_site_id            int unsigned null,
     denorm_recording_datetime datetime null,
     denorm_recording_date     date null,
+    KEY `fk_pattern_matching_matches_1_idx` (`pattern_matching_id`),
+    KEY `fk_pattern_matching_matches_2_idx` (`recording_id`),
+    KEY `fk_pattern_matching_matches_3_idx` (`species_id`),
+    KEY `fk_pattern_matching_matches_4_idx` (`songtype_id`),
+    KEY `fk_pattern_matching_rois_1_idx` (`denorm_site_id`),
+    KEY `pattern_matching_matches_recording_score_idx` (`recording_id`,`score`),
+    KEY `pattern_matching_matches_site_score_idx` (`pattern_matching_id`,`denorm_site_id`,`score`),
+    KEY `pattern_matching_matches_site_datetime_score_idx` (`pattern_matching_id`,`denorm_site_id`,`denorm_recording_date`,`score`),
+    KEY `validated_idx` (`validated`),
     constraint fk_pattern_matching_rois_2
         foreign key (pattern_matching_id) references arbimon2.pattern_matchings (pattern_matching_id),
     constraint fk_pattern_matching_rois_3
@@ -31,10 +40,3 @@ create table arbimon2.pattern_matching_rois_new (
     constraint fk_pattern_matching_rois_6
         foreign key (denorm_site_id) references arbimon2.sites (site_id)
 );
-insert into pattern_matching_rois_new
-select pattern_matching_roi_id, pattern_matching_id, recording_id, species_id, songtype_id, x1, y1, x2, y2,
-       case locate('_', substring_index(uri, '/', -1)) when 0 then cast(substring_index(substring_index(uri, '/', -1), '.', 1) as unsigned) else cast(substring_index(substring_index(uri, '/', -1), '_', 1) as unsigned) end uri_param1,
-       case locate('_', substring_index(uri, '/', -1)) when 0 then null else cast(substring_index(substring_index(uri, '_', -1), '.', 1) as unsigned) end uri_param2,
-       score, validated, cs_val_present, cs_val_not_present, consensus_validated, expert_validated, expert_validation_user_id,
-       denorm_site_id, denorm_recording_datetime, denorm_recording_date
-from pattern_matching_rois;
