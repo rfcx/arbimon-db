@@ -21,10 +21,8 @@ create table arbimon2.pattern_matching_rois_new (
     denorm_recording_datetime datetime null,
     denorm_recording_date     date null,
     PRIMARY KEY (pattern_matching_roi_id, pattern_matching_id),
-    KEY `pattern_matching_matches_recording_score_idx` (`recording_id`,`score`),
     KEY `pattern_matching_matches_site_score_idx` (`denorm_site_id`,`score`),
     KEY `pattern_matching_matches_site_datetime_score_idx` (`denorm_site_id`,`denorm_recording_date`,`score`),
     KEY `validated_idx` (`validated`),
-    KEY `pattern_matching_id_idx` (`pattern_matching_id`),
-    KEY `denorm_site_id_idx` (`denorm_site_id`)
+    KEY `pattern_matching_id_idx` (`pattern_matching_id`)
 ) PARTITION BY HASH(pattern_matching_id) PARTITIONS 100;
