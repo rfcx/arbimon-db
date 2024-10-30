@@ -17120,7 +17120,8 @@ INSERT INTO `species` (`species_id`, `scientific_name`, `code_name`, `taxon_id`,
 (16775, 'spp7', 'spp7', 6, 272, NULL, 'Unknown species', NULL, NULL),
 (16776, 'spp8', 'spp8', 6, 272, NULL, 'Unknown species', NULL, NULL),
 (16777, 'spp9', 'spp9', 6, 272, NULL, 'Unknown species', NULL, NULL),
-(16778, 'spp10', 'spp10', 6, 272, NULL, 'Unknown species', NULL, NULL);
+(16778, 'spp10', 'spp10', 6, 272, NULL, 'Unknown species', NULL, NULL),
+(42341, 'Alouatta macconnelli', NULL, 5, 256, NULL, NULL, NULL, NULL);
 
 --
 -- Dumping data for table `species_aliases`
