@@ -758,7 +758,8 @@ CREATE TABLE `pattern_matching_rois` (
   KEY `pattern_matching_matches_site_score_idx` (`denorm_site_id`,`score`),
   KEY `pattern_matching_matches_site_datetime_score_idx` (`denorm_site_id`,`denorm_recording_date`,`score`),
   KEY `validated_idx` (`validated`),
-  KEY `pattern_matching_id_idx` (`pattern_matching_id`)
+  KEY `pattern_matching_id_idx` (`pattern_matching_id`),
+  KEY `recording_id_idx` (`recording_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=85026209 DEFAULT CHARSET=latin1 PARTITION BY HASH(pattern_matching_id) PARTITIONS 10;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
