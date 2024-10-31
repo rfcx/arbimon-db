@@ -810,7 +810,6 @@ CREATE TABLE `pattern_matching_validations` (
   PRIMARY KEY (`validation_id`),
   KEY `fk_pattern_matching_validations_1` (`pattern_matching_roi_id`),
   KEY `fk_pattern_matching_validations_2` (`user_id`),
-  CONSTRAINT `fk_pattern_matching_validations_1` FOREIGN KEY (`pattern_matching_roi_id`) REFERENCES `pattern_matching_rois` (`pattern_matching_roi_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_pattern_matching_validations_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=686780 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
