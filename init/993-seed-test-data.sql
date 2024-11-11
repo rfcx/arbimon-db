@@ -8597,6 +8597,7 @@ INSERT INTO job_params_training (job_id, model_type_id, training_set_id, validat
 INSERT INTO job_params_training (job_id, model_type_id, training_set_id, validation_set_id, trained_model_id, use_in_training_present, use_in_training_notpresent, use_in_validation_present, use_in_validation_notpresent, name) VALUES (100001, 4, 2649, NULL, NULL, 6, 6, 57, 52, 'Alouatta_macconnelli new');
 
 INSERT INTO training_sets (training_set_id, project_id, name, date_created, training_set_type_id, removed) VALUES (924, 1055, 'Lipaugus_vociferans', '2017-09-01', 1, 1);
+INSERT INTO training_sets_roi_set (training_set_id, species_id, songtype_id) VALUES (924, 4532, 1);
 INSERT INTO models (model_id, name, model_type_id, uri, date_created, project_id, user_id, training_set_id, validation_set_id, deleted, threshold) VALUES (1329, 'Lipaugus_vociferans_model', 4, 'project_1055/models/job_4890_4532_1.mod', '2017-09-01 16:05:10', 1055, 1322, 924, 1591, 0, 0.3);
 INSERT INTO jobs (job_id, job_type_id, date_created, last_update, project_id, user_id, uri, state, cancel_requested, progress, completed, remarks, progress_steps, hidden, ncpu) VALUES (4890, 1, '2017-09-01 16:05:00', '2017-09-01 16:05:10', 1055, 1322, '', 'completed', 0, 63, 1, '', 63, 0, 3);
 INSERT INTO validation_set (validation_set_id, project_id, user_id, name, uri, params, job_id) VALUES (1591, 1055, 357, 'Lipaugus_vociferans_model validation', 'project_1055/validations/job_4890.csv', '{"name": "Lipaugus_vociferans_model"}', 4890);
