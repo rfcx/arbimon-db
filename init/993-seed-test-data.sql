@@ -8575,7 +8575,7 @@ INSERT INTO playlist_recordings (playlist_id, recording_id) VALUES (8686, 103472
 INSERT INTO playlist_recordings (playlist_id, recording_id) VALUES (8686, 1034726);
 INSERT INTO playlist_recordings (playlist_id, recording_id) VALUES (8686, 1034727);
 
-INSERT INTO training_sets (training_set_id, project_id, name, date_created, training_set_type_id, removed) VALUES (2649, 1055, 'Alouatta macconnelli', '2020-08-28', 1, 0, null);
+INSERT INTO training_sets (training_set_id, project_id, name, date_created, training_set_type_id, removed, metadata) VALUES (2649, 1055, 'Alouatta macconnelli', '2020-08-28', 1, 0, null);
 INSERT INTO training_sets_roi_set (training_set_id, species_id, songtype_id) VALUES (2649, 42341, 1);
 INSERT INTO training_set_roi_set_data (roi_set_data_id, training_set_id, recording_id, species_id, songtype_id, x1, y1, x2, y2, uri) VALUES (44541, 2649, 1138548, 42341, 1, 26.086074365391493, 108.22085889570553, 28.660216303181983, 3219.5705521472396, 'project_1055/training_sets/2649/44541.png');
 INSERT INTO training_set_roi_set_data (roi_set_data_id, training_set_id, recording_id, species_id, songtype_id, x1, y1, x2, y2, uri) VALUES (44542, 2649, 1138548, 42341, 1, 55.97412406149446, 108.22085889570553, 58.74213442974616, 2164.4171779141107, 'project_1055/training_sets/2649/44542.png');
@@ -8596,7 +8596,7 @@ INSERT INTO validation_set (validation_set_id, project_id, user_id, name, uri, p
 INSERT INTO job_params_training (job_id, model_type_id, training_set_id, validation_set_id, trained_model_id, use_in_training_present, use_in_training_notpresent, use_in_validation_present, use_in_validation_notpresent, name) VALUES (21537, 4, 2649, 4579, 3867, 6, 6, 57, 52, 'Alouatta_macconnelli');
 INSERT INTO job_params_training (job_id, model_type_id, training_set_id, validation_set_id, trained_model_id, use_in_training_present, use_in_training_notpresent, use_in_validation_present, use_in_validation_notpresent, name) VALUES (100001, 4, 2649, NULL, NULL, 6, 6, 57, 52, 'Alouatta_macconnelli new');
 
-INSERT INTO training_sets (training_set_id, project_id, name, date_created, training_set_type_id, removed) VALUES (924, 1055, 'Lipaugus_vociferans', '2017-09-01', 1, 1, null);
+INSERT INTO training_sets (training_set_id, project_id, name, date_created, training_set_type_id, removed, metadata) VALUES (924, 1055, 'Lipaugus_vociferans', '2017-09-01', 1, 1, null);
 INSERT INTO training_sets_roi_set (training_set_id, species_id, songtype_id) VALUES (924, 4532, 1);
 INSERT INTO models (model_id, name, model_type_id, uri, date_created, project_id, user_id, training_set_id, validation_set_id, deleted, threshold) VALUES (1329, 'Lipaugus_vociferans_model', 4, 'project_1055/models/job_4890_4532_1.mod', '2017-09-01 16:05:10', 1055, 1322, 924, 1591, 0, 0.3);
 INSERT INTO jobs (job_id, job_type_id, date_created, last_update, project_id, user_id, uri, state, cancel_requested, progress, completed, remarks, progress_steps, hidden, ncpu) VALUES (4890, 1, '2017-09-01 16:05:00', '2017-09-01 16:05:10', 1055, 1322, '', 'completed', 0, 63, 1, '', 63, 0, 3);
